@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="dhbk.android.io.plaidapp.HomeActivity"
+            android:name="io.plaidapp.ui.HomeActivity"
             android:theme="@style/Plaid.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
