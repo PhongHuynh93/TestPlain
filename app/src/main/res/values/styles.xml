@@ -17,7 +17,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-
+    <!--base application-->
     <style name="Plaid" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:colorPrimary">@color/primary</item>
         <item name="android:colorBackground">@color/background_light</item>
@@ -31,7 +31,7 @@
         <item name="android:windowSharedElementsUseOverlay">false</item>
     </style>
 
-
+    <!--activity home-->
     <style name="Plaid.Home">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@color/immersive_bars</item>
@@ -45,16 +45,17 @@
         <item name="initialBadgeColor">@color/gif_badge_dark_image</item>
     </style>
 
-
+    <!--toolbar in activity home-->
     <style name="Widget.Plaid.HomeToolbar" parent="Widget.Plaid.Toolbar.SmallCapsTitle">
         <item name="android:background">@null</item>
         <item name="android:elevation">0dp</item>
         <item name="android:theme">@android:style/ThemeOverlay.Material.Dark</item>
     </style>
 
-
+    <!--widget-->
     <style name="Widget.Plaid" parent="android:Widget" />
 
+    <!--base toolbar -->
     <style name="Widget.Plaid.Toolbar">
         <item name="android:titleTextAppearance">@android:style/TextAppearance.Material.Widget.ActionBar.Title</item>
         <item name="android:background">?android:colorPrimary</item>
@@ -62,16 +63,18 @@
         <item name="android:theme">@style/PlaidDarkOverlay</item>
     </style>
 
-
+    <!--small title toolbar-->
     <style name="Widget.Plaid.Toolbar.SmallCapsTitle">
         <item name="android:titleTextAppearance">@style/TextAppearance.ToolbarTitleSmallCaps</item>
     </style>
 
+    <!--black toolbar-->
     <style name="PlaidDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
         <!-- Used to theme dark elements in light themed screens.
              Extend the material dark Action Bar overlay as this contains text styling. -->
     </style>
 
+    <!--light small char with black toolbar-->
     <style name="TextAppearance.ToolbarTitleSmallCaps" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
         <item name="android:textColor">@color/text_primary_light</item>
         <item name="android:fontFeatureSettings">smcp</item>
