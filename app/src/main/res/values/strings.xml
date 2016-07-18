@@ -153,5 +153,6 @@
 
     <!-- content authorities -->
     <string name="share_authority" translatable="false">io.plaidapp.shareprovider</string>
+    <string name="title_activity_search2">SearchActivity2</string>
 
 </resources>

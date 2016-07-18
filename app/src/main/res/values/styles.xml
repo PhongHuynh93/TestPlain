@@ -53,11 +53,13 @@
     </style>
 
     <!--widget-->
-    <style name="Widget.Plaid" parent="android:Widget" />
+    <style name="Widget.Plaid" parent="android:Widget"/>
 
     <!--base toolbar -->
     <style name="Widget.Plaid.Toolbar">
-        <item name="android:titleTextAppearance">@android:style/TextAppearance.Material.Widget.ActionBar.Title</item>
+        <item name="android:titleTextAppearance">
+            @android:style/TextAppearance.Material.Widget.ActionBar.Title
+        </item>
         <item name="android:background">?android:colorPrimary</item>
         <item name="android:elevation">@dimen/z_app_bar</item>
         <item name="android:theme">@style/PlaidDarkOverlay</item>
@@ -106,5 +108,14 @@
         <item name="shotLoadingPlaceholderColors">@array/loading_placeholders_dark</item>
         <item name="initialBadgeColor">@color/gif_badge_dark_image</item>
     </style>
+
+    <style name="Plaid.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Plaid.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="Plaid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 </resources>
