@@ -1,7 +1,10 @@
 package io.plaidapp.ui;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ActionMenuView;
@@ -15,6 +18,7 @@ import io.plaidapp.util.AnimUtils;
 
 public class HomeActivity extends Activity {
 
+    private static final int RC_SEARCH = 0;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
@@ -29,6 +33,31 @@ public class HomeActivity extends Activity {
         if (savedInstanceState == null) {
             animateToolbar();
         }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_search:
+                // get the icon's location on screen to pass through to the search screen
+                View searchMenuView = toolbar.findViewById(R.id.menu_search);
+                int[] loc = new int[2];
+                searchMenuView.getLocationOnScreen(loc);
+                startActivityForResult(SearchActivity.createStartIntent(this, loc[0], loc[0] +
+                        (searchMenuView.getWidth() / 2)), RC_SEARCH, ActivityOptions
+                        .makeSceneTransitionAnimation(this).toBundle());
+                searchMenuView.setAlpha(0f);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
