@@ -1,4 +1,4 @@
-package dhbk.android.testplain;
+package dhbk.android.plaidapp;
 
 import org.junit.Test;
 
